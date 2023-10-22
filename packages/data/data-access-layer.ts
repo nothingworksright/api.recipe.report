@@ -42,11 +42,11 @@ export interface IDataAccessLayer {
 @injectable()
 export class DataAccessLayer implements IDataAccessLayer {
   private _pool = new pg.Pool({
-    user: process.env['RRDB_USER'] as string,
-    host: process.env['RRDB_HOST'] as string,
-    database: process.env['RRDB_DATABASE'] as string,
-    password: process.env['RRDB_PASSWORD'] as string,
-    port: parseInt(process.env['RRDB_PORT'] as string, 10),
+    user: process.env['PGUSER'] as string,
+    host: process.env['PGHOST'] as string,
+    database: process.env['PGDATABASE'] as string,
+    password: process.env['PGPASSWORD'] as string,
+    port: parseInt(process.env['PGPORT'] as string, 10),
   })
 
   /**

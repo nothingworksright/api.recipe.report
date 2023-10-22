@@ -92,22 +92,23 @@ export class RecipeReport implements IRecipeReport {
     if (!process.env['RR_CRYPTO_IV_LENGTH'])
       throw new Err(`ENV_RR_CRYPTO_IV_LENGTH`, errEnv.ENV_RR_CRYPTO_IV_LENGTH)
     if (!process.env['RR_JWT_SECRET']) throw new Err(`ENV_RR_JWT_SECRET`, errEnv.ENV_RR_JWT_SECRET)
-    if (!process.env['RRDB_USER']) throw new Err(`ENV_RRDB_USER`, errEnv.ENV_RRDB_USER)
-    if (!process.env['RRDB_HOST']) throw new Err(`ENV_RRDB_HOST`, errEnv.ENV_RRDB_HOST)
-    if (!process.env['RRDB_DATABASE']) throw new Err(`ENV_RRDB_DATABASE`, errEnv.ENV_RRDB_DATABASE)
-    if (!process.env['RRDB_PASSWORD']) throw new Err(`ENV_RRDB_PASSWORD`, errEnv.ENV_RRDB_PASSWORD)
-    if (!process.env['RRDB_PORT']) throw new Err(`ENV_RRDB_PORT`, errEnv.ENV_RRDB_PORT)
-    if (!process.env['RRDB_OWNER']) {
-      log.warn(`RRDB_OWNER is not set. Database migrations are disabled.`)
-    }
-    if (!process.env['RRDB_URL']) {
-      log.warn(`RRDB_URL is not set. Database migrations are disabled.`)
-    }
-    if (!process.env['RRDB_MIGRATIONS']) {
-      log.warn(`RRDB_MIGRATIONS is not set. Database migrations are disabled.`)
-    }
     if (!process.env['RR_LOG_TARGETS']) {
       log.warn(`RR_LOG_TARGETS is not set. Logging is disabled.`)
+    }
+    // Database env vars
+    if (!process.env['PGUSER']) throw new Err(`ENV_PGUSER`, errEnv.ENV_PGUSER)
+    if (!process.env['PGHOST']) throw new Err(`ENV_PGHOST`, errEnv.ENV_PGHOST)
+    if (!process.env['PGDATABASE']) throw new Err(`ENV_PGDATABASE`, errEnv.ENV_PGDATABASE)
+    if (!process.env['PGPASSWORD']) throw new Err(`ENV_PGPASSWORD`, errEnv.ENV_PGPASSWORD)
+    if (!process.env['PGPORT']) throw new Err(`ENV_PGPORT`, errEnv.ENV_PGPORT)
+    if (!process.env['PGOWNER']) {
+      log.warn(`PGOWNER is not set. Database migrations are disabled.`)
+    }
+    if (!process.env['PGURL']) {
+      log.warn(`PGURL is not set. Database migrations are disabled.`)
+    }
+    if (!process.env['PGMIGRATIONS']) {
+      log.warn(`PGMIGRATIONS is not set. Database migrations are disabled.`)
     }
   }
 

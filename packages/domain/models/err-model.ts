@@ -93,11 +93,11 @@ export const errEnv = {
   ENV_RR_CRYPTO_ALGO: `RR_CRYPTO_ALGO is not set. This is required for encrypting and decrypting data.`,
   ENV_RR_CRYPTO_IV_LENGTH: `RR_CRYPTO_IV_LENGTH is not set. This is required for encrypting and decrypting data.`,
   ENV_RR_JWT_SECRET: `RR_JWT_SECRET is not set. This is required for encoding and decoding JSON web tokens.`,
-  ENV_RRDB_USER: `RRDB_USER is not set. This is required for database communication.`,
-  ENV_RRDB_HOST: `RRDB_HOST is not set. This is required for database communication.`,
-  ENV_RRDB_DATABASE: `RRDB_DATABASE is not set. This is required for database communication.`,
-  ENV_RRDB_PASSWORD: `RRDB_PASSWORD is not set. This is required for database communication.`,
-  ENV_RRDB_PORT: `RRDB_PORT is not set. This is required for database communication.`,
+  ENV_PGUSER: `PGUSER is not set. This is required for database communication.`,
+  ENV_PGHOST: `PGHOST is not set. This is required for database communication.`,
+  ENV_PGDATABASE: `PGDATABASE is not set. This is required for database communication.`,
+  ENV_PGPASSWORD: `PGPASSWORD is not set. This is required for database communication.`,
+  ENV_PGPORT: `PGPORT is not set. This is required for database communication.`,
 }
 type errEnvType = typeof errEnv
 export type errEnvKeyType = keyof errEnvType
