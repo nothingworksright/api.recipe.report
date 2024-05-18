@@ -1,0 +1,23 @@
+{
+  "transforms": [
+    {
+      "mode": "sql",
+      "include": "**/*.sql",
+      "emitTemplate": "{{dir}}/{{name}}.queries.ts"
+    },
+    {
+      "mode": "ts",
+      "include": "**/*.ts",
+      "emitTemplate": "{{dir}}/{{name}}.types.ts"
+    },
+    {
+      "mode": "ts-implicit",
+      "include": "index.test.ts",
+      "functionName": "sql",
+      "emitFileName": "./src/sql/index.ts"
+    }
+  ],
+  "srcDir": "./migrations/",
+  "failOnError": false,
+  "camelCaseColumnNames": false
+}

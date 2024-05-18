@@ -57,7 +57,7 @@ npm run migrate
 
 #### Install  
 
-The Recipe.Report packages are organized into a monorepo. Install dependencies from the root directory (~/recipe-report/). Node.js and npm must be installed installed before running this command.  
+The Recipe.Report packages are organized into a monorepo. Install dependencies from the root directory (~/recipe-report/). Node.js and npm must be installed before running this command.  
 
 ```bash
 cd ~/recipe-report
