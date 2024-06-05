@@ -5,8 +5,10 @@
   "repository": "github:unblinking/recipe-report",
   "license": "AGPL-3.0-or-later",
   "engines": {
-    "node": "v16.17.0"
+    "npm": "10.7.0",
+    "node": "v22.2.0"
   },
+  "type": "module",
   "scripts": {
     "updates": "echo \"Updating dependencies\" && ncu -u",
     "prettier": "prettier --write src/**/**.{ts,tsx}",

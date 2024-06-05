@@ -8,9 +8,10 @@
   },
   "license": "AGPL-3.0-or-later",
   "engines": {
-    "npm": "8.15.0",
-    "node": "v16.17.0"
+    "npm": "10.7.0",
+    "node": "v22.2.0"
   },
+  "type": "module",
   "scripts": {
     "updates": "echo \"Checking for available dependency updates\" && ncu",
     "test": "jest --colors --coverage",

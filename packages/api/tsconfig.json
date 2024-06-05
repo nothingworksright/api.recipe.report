@@ -17,6 +17,6 @@
       "reflect-metadata",
     ],
     "outDir": "./dist",
-    "lib": ["ES2021"],
+    "lib": ["ESNext"],
   }
 }

@@ -4,6 +4,7 @@
   "description": "recipe.report domain",
   "repository": "github:unblinking/recipe-report",
   "license": "AGPL-3.0-or-later",
+  "type": "module",
   "scripts": {
     "prettier": "prettier --write dtos/** interfaces/** maps/** models/** services/** values/**",
     "linter": "eslint --ext .js,.jsx,.ts,.tsx src/"

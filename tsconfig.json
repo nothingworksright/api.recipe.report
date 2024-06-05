@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Node 16",
+  "display": "Node 22",
 
   "include": ["packages/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"],
@@ -24,8 +24,8 @@
     "useUnknownInCatchVariables": true,
 
     "allowUmdGlobalAccess": false,
-    "module": "ES2022",
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "noResolve": false,
     "resolveJsonModule": true,
 
@@ -34,15 +34,14 @@
     "emitBOM": false,
     "emitDeclarationOnly": false,
     "importHelpers": false,
-    "importsNotUsedAsValues": "error",
     "inlineSourceMap": false,
     "inlineSources": false,
     "newLine": "lf",
-    "noEmit": false,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
     "noEmitHelpers": false,
     "noEmitOnError": false,
     "preserveConstEnums": true,
-    "preserveValueImports": true,
     "removeComments": true,
     "sourceMap": true,
     "stripInternal": false,
@@ -58,7 +57,6 @@
     "isolatedModules": true,
     "preserveSymlinks": false,
 
-    "charset": "utf8",
     "keyofStringsOnly": false,
     "noImplicitUseStrict": false,
     "noStrictGenericChecks": false,
@@ -68,9 +66,13 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "jsx": "react-jsx",
-    "target": "es2021",
+    "target": "ESNext",
     "useDefineForClassFields": false,
 
     "skipLibCheck": true
+  },
+  "tsc-alias": {
+    "verbose": true,
+    "resolveFullPaths": true,
   }
 }
